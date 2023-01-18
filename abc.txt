@@ -1,3 +1,4 @@
 Hi 
 Welcome to Java Training
 We are learning git
+We are going to learn spring framework in phase 3
