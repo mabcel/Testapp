@@ -3,13 +3,15 @@ class Abc {
 	int a;         // instance variable
 	static int b;  // static variable
 	void dis1() {
-		System.out.println("Non stativ method or instance method");
+		System.out.println("Non static method or instance method");
 		System.out.println("a "+a);
 		System.out.println("b "+b);
 	}
 	static void dis2() {
 		System.out.println("static method");
+		Abc obj = new Abc();
 		//System.out.println("a "+a);
+		System.out.println("a "+obj.a);
 		System.out.println("b "+b);
 	}
 }
