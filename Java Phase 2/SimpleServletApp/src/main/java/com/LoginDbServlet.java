@@ -40,7 +40,7 @@ String emailid = req.getParameter("emailid");
 		try {
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con = 
-DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root@123");
+DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "Code4Christ!s");
 PreparedStatement pstmt = 
 con.prepareStatement("select * from login where emailid=? and password = ?");
 		pstmt.setString(1, emailid);

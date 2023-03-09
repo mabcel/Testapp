@@ -1,0 +1,3 @@
+alter table productdetails modify imageUrl blob;
+
+desc productdetails; 
