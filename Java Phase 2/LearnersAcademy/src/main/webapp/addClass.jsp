@@ -7,6 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h2>Add Class</h2>
+<form action="AcademyController" method="post">
+	<label>Class Name</label>
+	<input type="text" name="cname"><br/>
+	<label>Price</label>
+	<input type="number" name="price"><br/>
+	<label>Quantity</label>
+	<input type="number" name="quantity"><br/>
+	<label>URL</label>
+	<input type="url" name="imageUrl"><br/>
+	<input type="submit" value="Store Product">
+	<input type="reset" value="reset">
+</form>
 </body>
 </html>
