@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Learner's Academy</title>
 </head>
 <body>
+<h1>Learner's Academy</h1>
+<h2>Students</h2>
+<a href="addStudent.jsp">Add Student</a>
+<a href="viewStudent.jsp">View Students</a>
+<a href="assignStudentToClass.jsp">Assign Student to Class</a>
 
+<jsp:include page="Home.jsp"></jsp:include>		
+			
 </body>
 </html>

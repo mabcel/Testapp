@@ -4,11 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Learner's Academy</title>
 </head>
 <body>
 <%
 out.println("Welcome to Learner's Academy");
 %>
+<a href="classesHome.jsp">Classes</a>
+<a href="studentsHome.jsp">Students</a>
+<a href="subjectsHome.jsp">Subjects</a>
+<a href="teachersHome.jsp">Teachers</a>
 </body>
 </html>
