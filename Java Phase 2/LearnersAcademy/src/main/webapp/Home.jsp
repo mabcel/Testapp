@@ -7,9 +7,11 @@
 <title>Learner's Academy</title>
 </head>
 <body>
+<h1>
 <%
 out.println("Welcome to Learner's Academy");
 %>
+</h1>
 <div>
 <div>
 <a href="classesHome.jsp">Classes</a>

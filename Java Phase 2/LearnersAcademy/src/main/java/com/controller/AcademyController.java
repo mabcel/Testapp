@@ -3,6 +3,7 @@ package com.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -39,7 +40,7 @@ public class AcademyController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");
@@ -47,9 +48,23 @@ public class AcademyController extends HttpServlet {
 		
 		//view classes
 		List<Classes> listOfClasses = as.viewClasses();
-		request.setAttribute("listOfClasses", listOfClasses);
-		RequestDispatcher rc = request.getRequestDispatcher("viewClass.jsp");
+		Iterator<Classes> ii = listOfClasses.iterator();
+		while(ii.hasNext()) {
+			Classes c = ii.next();
+			pw.println("<div>");
+	//		pw.println("<img src="+p.getImageUrl()+" width=100 height=100/>");
+			pw.println("<p>Cid is "+c.getCid()+" CName is "+c.getCname()+"</p>");
+			pw.println("</div>");
+		}
+		
+		//request.setAttribute("listOfClasses", listOfClasses);
+		RequestDispatcher rc = request.getRequestDispatcher("classesHome.jsp");
 		rc.include(request, response);
+		
+		
+	
+
+		
 		
 		//view students
 		List<Students> listOfStudents = as.viewStudents();
@@ -84,12 +99,12 @@ PrintWriter pw = response.getWriter();
 		//add class
 		int cid = Integer.parseInt(request.getParameter("cid"));
 		String cname = request.getParameter("cname");;
-		Integer ctid = Integer.parseInt(request.getParameter("ctid"));
+		//Integer ctid = Integer.parseInt(request.getParameter("ctid"));
 		
 		Classes c = new Classes();
 		c.setCid(cid);
 		c.setCname(cname);
-		c.setCtid(ctid);
+		//c.setCtid(ctid);
 		
 		AcademyService as = new AcademyService();
 		String result  = as.addClass(c);
@@ -103,12 +118,12 @@ PrintWriter pw = response.getWriter();
 		//add student
 		int stid = Integer.parseInt(request.getParameter("stid"));
 		String stname = request.getParameter("stname");;
-		Integer scid = Integer.parseInt(request.getParameter("scid"));
+		//Integer scid = Integer.parseInt(request.getParameter("scid"));
 				
 		Students st = new Students();
 		st.setStid(stid);
 		st.setStname(stname);
-		st.setScid(scid);
+		//st.setScid(scid);
 			
 		//AcademyService as = new AcademyService();
 		String results  = as.addStudent(st);
@@ -122,12 +137,12 @@ PrintWriter pw = response.getWriter();
 		//add subject
 		int suid = Integer.parseInt(request.getParameter("suid"));
 		String subname = request.getParameter("subname");;
-		Integer sutid = Integer.parseInt(request.getParameter("sutid"));
+		//Integer sutid = Integer.parseInt(request.getParameter("sutid"));
 				
 		Subjects su = new Subjects();
 		su.setSuid(suid);
 		su.setSubname(subname);
-		su.setSutid(sutid);
+		//su.setSutid(sutid);
 				
 		//AcademyService as = new AcademyService();
 		String resultu  = as.addSubject(su);
@@ -142,12 +157,12 @@ PrintWriter pw = response.getWriter();
 		//add teacher
 		int tid = Integer.parseInt(request.getParameter("tid"));
 		String tname = request.getParameter("tname");;
-		Integer tcid = Integer.parseInt(request.getParameter("tcid"));
+		//Integer tcid = Integer.parseInt(request.getParameter("tcid"));
 				
 		Teachers t = new Teachers();
 		t.setTid(tid);
 		t.setTname(tname);
-		t.setTcid(tcid);
+		//t.setTcid(tcid);
 						
 		//AcademyService as = new AcademyService();
 		String resultt  = as.addTeacher(t);

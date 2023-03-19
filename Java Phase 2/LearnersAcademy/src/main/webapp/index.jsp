@@ -10,7 +10,10 @@
 <%
 out.println("Welcome to Learner's Academy");
 %>
+
+<div>
 <a href="login.jsp">Login</a>
+</div>
 
 </body>
 </html>

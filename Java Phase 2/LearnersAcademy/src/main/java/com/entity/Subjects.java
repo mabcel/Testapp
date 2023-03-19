@@ -3,6 +3,7 @@ package com.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Table(name="Subjects")
@@ -10,7 +11,8 @@ public class Subjects {
 	@Id
 	private int suid;
 	private String subname;
-	private Integer sutid;
+	@ManyToOne
+	private Classes clss;
 	public int getSuid() {
 		return suid;
 	}
@@ -23,15 +25,9 @@ public class Subjects {
 	public void setSubname(String subname) {
 		this.subname = subname;
 	}
-	public Integer getSutid() {
-		return sutid;
-	}
-	public void setSutid(Integer sutid) {
-		this.sutid = sutid;
-	}
 	@Override
 	public String toString() {
-		return "Subjects [suid=" + suid + ", subname=" + subname + ", sutid=" + sutid + "]";
+		return "Subjects [suid=" + suid + ", subname=" + subname + "]";
 	}
 
 }

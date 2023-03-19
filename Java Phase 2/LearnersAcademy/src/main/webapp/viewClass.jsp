@@ -8,5 +8,7 @@
 </head>
 <body>
 <a href="AcademyController">View Class</a>
+
+<!--<jsp:include page="addClass.jsp"></jsp:include> -->
 </body>
 </html>

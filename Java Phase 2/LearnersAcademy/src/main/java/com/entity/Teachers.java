@@ -7,19 +7,22 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+
+
 
 @Entity
 @Table(name="Teachers")
 public class Teachers {
    @Id
+   @GeneratedValue
 	private int tid;
 	private String tname;
-	private Integer tcid;
 	@OneToMany
-	@JoinColumn(name = "stid")
+	//@JoinColumn(name = "")
 	private List<Subjects> listOfSub;
-	@OneToMany
-	@JoinColumn(name = "ctid")
+	@OneToMany(mappedBy = "listOfTeach")
+	//@JoinColumn(name = "")
 	private List<Classes> listOfCls;
 	public int getTid() {
 		return tid;
@@ -32,12 +35,6 @@ public class Teachers {
 	}
 	public void setTname(String tname) {
 		this.tname = tname;
-	}
-	public Integer getTcid() {
-		return tcid;
-	}
-	public void setTcid(Integer tcid) {
-		this.tcid = tcid;
 	}
 	public List<Subjects> getListOfSub() {
 		return listOfSub;
@@ -53,7 +50,7 @@ public class Teachers {
 	}
 	@Override
 	public String toString() {
-		return "Teachers [tid=" + tid + ", tname=" + tname + ", tcid=" + tcid + ", listOfSub=" + listOfSub
+		return "Teachers [tid=" + tid + ", tname=" + tname + ", listOfSub=" + listOfSub
 				+ ", listOfCls=" + listOfCls + "]";
 	}
 

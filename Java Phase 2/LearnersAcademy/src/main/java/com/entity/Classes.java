@@ -2,22 +2,24 @@ package com.entity;
 
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="Classes")
 public class Classes {
     @Id
+    @GeneratedValue
 	private int cid;
 	private String cname;
-	private Integer ctid;
 	@OneToMany
 	private List<Students> listOfStd;
-	@OneToMany
-	@JoinColumn(name = "stid")
+	@OneToMany (mappedBy = "clss")
+	//@JoinColumn(name = "")
 	private List<Subjects> listOfSbj;
 	@OneToMany
 	private List<Teachers> listOfTeach;
@@ -32,12 +34,6 @@ public class Classes {
 	}
 	public void setCname(String cname) {
 		this.cname = cname;
-	}
-	public Integer getCtid() {
-		return ctid;
-	}
-	public void setCtid(Integer ctid) {
-		this.ctid = ctid;
 	}
 	public List<Students> getListOfStd() {
 		return listOfStd;
@@ -59,7 +55,7 @@ public class Classes {
 	}
 	@Override
 	public String toString() {
-		return "Classes [cid=" + cid + ", cname=" + cname + ", ctid=" + ctid + ", listOfStd=" + listOfStd
+		return "Classes [cid=" + cid + ", cname=" + cname + ", listOfStd=" + listOfStd
 				+ ", listOfSbj=" + listOfSbj + ", listOfTeach=" + listOfTeach + "]";
 	}
 }

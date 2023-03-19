@@ -1,6 +1,7 @@
 package com.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,12 +12,12 @@ import javax.persistence.Table;
 @Table(name="Students")
 public class Students {
 	@Id
+	@GeneratedValue
 	private int stid;
 	private String stname;
-	private Integer scid;
-	@ManyToOne
+	//@ManyToOne
+	//@JoinColumn(name = "")
 	@OneToOne
-	@JoinColumn(name = "ctid")
 	private Classes cls;
 	public int getStid() {
 		return stid;
@@ -30,12 +31,6 @@ public class Students {
 	public void setStname(String stname) {
 		this.stname = stname;
 	}
-	public Integer getScid() {
-		return scid;
-	}
-	public void setScid(Integer scid) {
-		this.scid = scid;
-	}
 	public Classes getCls() {
 		return cls;
 	}
@@ -44,7 +39,7 @@ public class Students {
 	}
 	@Override
 	public String toString() {
-		return "Students [stid=" + stid + ", stname=" + stname + ", scid=" + scid + ", cls=" + cls + "]";
+		return "Students [stid=" + stid + ", stname=" + stname + ", cls=" + cls + "]";
 	}
 
 }
