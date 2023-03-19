@@ -4,9 +4,21 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Learner's Academy</title>
 </head>
 <body>
-
+<h2>Add Teacher</h2>
+<form action="AcademyController" method="post">
+	<label>Teacher ID</label>
+	<input type="number" name="tid"><br/>
+	<label>Teacher Name</label>
+	<input type="text" name="tname"><br/>
+	<!--<label>Teacher ID</label>
+	<input type="number" name="tcid"><br/>
+	<label>URL</label>
+	<input type="url" name="imageUrl"><br/> -->
+	<input type="submit" value="Save Teacher">
+	<input type="reset" value="reset">
+</form>
 </body>
 </html>

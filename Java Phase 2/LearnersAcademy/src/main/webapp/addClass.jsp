@@ -4,20 +4,20 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Learner's Academy</title>
 </head>
 <body>
 <h2>Add Class</h2>
 <form action="AcademyController" method="post">
+	<label>Class ID</label>
+	<input type="number" name="cid"><br/>
 	<label>Class Name</label>
 	<input type="text" name="cname"><br/>
-	<label>Price</label>
-	<input type="number" name="price"><br/>
-	<label>Quantity</label>
-	<input type="number" name="quantity"><br/>
+	<!--<label>Teacher ID</label>
+	<input type="number" name="ctid"><br/>
 	<label>URL</label>
-	<input type="url" name="imageUrl"><br/>
-	<input type="submit" value="Store Product">
+	<input type="url" name="imageUrl"><br/> -->
+	<input type="submit" value="Save Class">
 	<input type="reset" value="reset">
 </form>
 </body>

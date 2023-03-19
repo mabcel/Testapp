@@ -14,7 +14,7 @@
 <a href="assignTeacherToClass.jsp">Assign Teacher to Class</a>
 <a href="assignTeacherToSubject.jsp">Assign Teacher to Subject</a>
 
-<jsp:include page="Home.jsp"></jsp:include>		
+<jsp:include page="index.jsp"></jsp:include>		
 			
 </body>
 </html>

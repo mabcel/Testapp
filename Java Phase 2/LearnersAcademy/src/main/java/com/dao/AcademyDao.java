@@ -32,7 +32,7 @@ public class AcademyDao {
 	}
 	
 	//add student
-	public int addStudent(Student student) {
+	public int addStudent(Students student) {
 		SessionFactory sf = DbResource.getSessionFactory();
 		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
@@ -51,7 +51,7 @@ public class AcademyDao {
 	}
 	
 	//add subject
-	public int addSubject(Subject subject) {
+	public int addSubject(Subjects subject) {
 		SessionFactory sf = DbResource.getSessionFactory();
 		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
@@ -71,7 +71,7 @@ public class AcademyDao {
 	}
 	
 	// add teacher
-	public int addTeacher(Teacher teacher) {
+	public int addTeacher(Teachers teacher) {
 		SessionFactory sf = DbResource.getSessionFactory();
 		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
@@ -86,7 +86,7 @@ public class AcademyDao {
 		SessionFactory sf = DbResource.getSessionFactory();
 		Session session = sf.openSession();
 		TypedQuery tq = session.createQuery("from Teachers");
-		List<Classes> listOfClasses = tq.getResultList();
+		List<Teachers> listOfTeachers = tq.getResultList();
 		return listOfTeachers;
 	}
 }
