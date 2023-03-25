@@ -7,7 +7,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="AcademyController">View Class Report</a>
+<a href="AcademyControllerr">View Class Report</a>
+
+<!-- <div class="Data"><a href="ReadData">Read Data Entries</a></div>  -->
+
+
+<!--  <table>
+  <tr>
+    <th>Class</th>
+    <th>Students</th>
+    <th>Teachers</th>
+    <th class="tb" >suid</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table> -->
+
+
 
 </body>
 </html>

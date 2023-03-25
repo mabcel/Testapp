@@ -13,6 +13,10 @@
 <a href="viewClass.jsp">View Classes</a>
 <a href="assignSubjectToClass.jsp">Assign Subject to Class</a>
 
+<div>
+<a href="classReport.jsp">Class Report</a>
+</div>
+
 <!--<jsp:include page="Home.jsp"></jsp:include>		-->
 			
 </body>

@@ -15,6 +15,7 @@
 	<div class="item" ><input type="text" placeholder="Subject ID" class="tb" name="suid" /></div>
 	<div class="item" ><input type="text" placeholder="Subject Name" class="tb"  name="subname" /></div>
 	<div class="item" >
+
 	<div style="color:white; margin: 10px; text-align:center;">Select Class</div> 
 	<select class="tb" name="Classes">
 	<option value="1">Software Engineering</option>
@@ -27,7 +28,7 @@
 	<option value="8">Artificial Intelligence</option>
 	</select></div>
 	<div ><input type="submit" value="SUBMIT" class="btn"  /></div>
-<!-- <div class="Data"><a href="ReadData">Read Data Entries</a></div>  -->	
+
 </form>
 </div>
 
