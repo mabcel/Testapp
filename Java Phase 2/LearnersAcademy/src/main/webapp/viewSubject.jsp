@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href="AcademyControllerc">View Subject</a>
 
 </body>
 </html>

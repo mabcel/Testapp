@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="AcademyControllers">View Student</a>
+<a href="AcademyController">View Class Report</a>
 
 </body>
 </html>

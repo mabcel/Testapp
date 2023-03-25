@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name="Classes")
 public class Classes {
     @Id
-    @GeneratedValue
+    //@GeneratedValue
 	private int cid;
 	private String cname;
 	@OneToMany

@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.entity.Classes;
+import com.entity.Teachers;
 import com.entity.Subjects;
 import com.entity.Students;
-import com.entity.Teachers;
 import com.service.AcademyService;
 
 
@@ -83,7 +83,7 @@ public class AcademyController extends HttpServlet {
 		request.setAttribute("listOfTeachers", listOfTeachers);
 		RequestDispatcher rt = request.getRequestDispatcher("viewTeacher.jsp");
 		rt.include(request, response);
-		
+//		
 	}
 
 	/**
@@ -150,7 +150,7 @@ PrintWriter pw = response.getWriter();
 				pw.println(resultu);
 				
 				RequestDispatcher rs = request.getRequestDispatcher("subjectsHome.jsp");
-				rc.include(request, response);
+				rs.include(request, response);
 				
 				
 				

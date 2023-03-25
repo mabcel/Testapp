@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>Add Teacher</h2>
-<form action="AcademyController" method="post">
+<form action="AcademyControllert" method="post">
 	<label>Teacher ID</label>
 	<input type="number" name="tid"><br/>
 	<label>Teacher Name</label>

@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>Add Subject</h2>
-<form action="AcademyController" method="post">
+<form action="AcademyControllerc" method="post">
 	<label>Subject ID</label>
 	<input type="number" name="suid"><br/>
 	<label>Subject Name</label>

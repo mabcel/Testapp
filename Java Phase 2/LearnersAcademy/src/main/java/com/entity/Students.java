@@ -1,5 +1,6 @@
 package com.entity;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Table(name="Students")
 public class Students {
 	@Id
-	@GeneratedValue
+	//@GeneratedValue
 	private int stid;
 	private String stname;
 	//@ManyToOne

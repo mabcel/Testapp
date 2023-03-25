@@ -7,14 +7,14 @@
 <title>Learner's Academy</title>
 </head>
 <body>
-<h1>Learner's Academy</h1>
+<!-- <h1>Learner's Academy</h1> -->
 <h2>Teachers</h2>
 <a href="addTeacher.jsp">Add Teacher</a>
 <a href="viewTeacher.jsp">View Teachers</a>
 <a href="assignTeacherToClass.jsp">Assign Teacher to Class</a>
 <a href="assignTeacherToSubject.jsp">Assign Teacher to Subject</a>
 
-<jsp:include page="Home.jsp"></jsp:include>		
+<!-- <jsp:include page="Home.jsp"></jsp:include>	-->	
 			
 </body>
 </html>

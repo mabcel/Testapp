@@ -1,9 +1,11 @@
 package com.entity;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.ManyToOne;
+
 
 @Entity
 @Table(name="Subjects")

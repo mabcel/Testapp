@@ -15,7 +15,7 @@ import javax.persistence.GeneratedValue;
 @Table(name="Teachers")
 public class Teachers {
    @Id
-   @GeneratedValue
+   //@GeneratedValue
 	private int tid;
 	private String tname;
 	@OneToMany
