@@ -65,24 +65,24 @@ public class AcademyController extends HttpServlet {
 	
 
 		
-		
-		//view students
-		List<Students> listOfStudents = as.viewStudents();
-		request.setAttribute("listOfStudents", listOfStudents);
-		RequestDispatcher rd = request.getRequestDispatcher("viewStudent.jsp");
-		rd.include(request, response);
-		
-		//view subjects
-		List<Subjects> listOfSubjects = as.viewSubjects();
-		request.setAttribute("listOfSubjects", listOfSubjects);
-		RequestDispatcher rs = request.getRequestDispatcher("viewSubject.jsp");
-		rs.include(request, response);
-		
-		//view teachers
-		List<Teachers> listOfTeachers = as.viewTeachers();
-		request.setAttribute("listOfTeachers", listOfTeachers);
-		RequestDispatcher rt = request.getRequestDispatcher("viewTeacher.jsp");
-		rt.include(request, response);
+//		
+//		//view students
+//		List<Students> listOfStudents = as.viewStudents();
+//		request.setAttribute("listOfStudents", listOfStudents);
+//		RequestDispatcher rd = request.getRequestDispatcher("viewStudent.jsp");
+//		rd.include(request, response);
+//		
+//		//view subjects
+//		List<Subjects> listOfSubjects = as.viewSubjects();
+//		request.setAttribute("listOfSubjects", listOfSubjects);
+//		RequestDispatcher rs = request.getRequestDispatcher("viewSubject.jsp");
+//		rs.include(request, response);
+//		
+//		//view teachers
+//		List<Teachers> listOfTeachers = as.viewTeachers();
+//		request.setAttribute("listOfTeachers", listOfTeachers);
+//		RequestDispatcher rt = request.getRequestDispatcher("viewTeacher.jsp");
+//		rt.include(request, response);
 //		
 	}
 
@@ -115,63 +115,63 @@ PrintWriter pw = response.getWriter();
 		rc.include(request, response);
 		
 		
-		//add student
-		int stid = Integer.parseInt(request.getParameter("stid"));
-		String stname = request.getParameter("stname");;
-		//Integer scid = Integer.parseInt(request.getParameter("scid"));
-				
-		Students st = new Students();
-		st.setStid(stid);
-		st.setStname(stname);
-		//st.setScid(scid);
-			
-		//AcademyService as = new AcademyService();
-		String results  = as.addStudent(st);
-				
-		pw.println(results);
-				
-		RequestDispatcher rd = request.getRequestDispatcher("studentsHome.jsp");
-		rd.include(request, response);
-		
-				
-		//add subject
-		int suid = Integer.parseInt(request.getParameter("suid"));
-		String subname = request.getParameter("subname");;
-		//Integer sutid = Integer.parseInt(request.getParameter("sutid"));
-				
-		Subjects su = new Subjects();
-		su.setSuid(suid);
-		su.setSubname(subname);
-		//su.setSutid(sutid);
-				
-		//AcademyService as = new AcademyService();
-		String resultu  = as.addSubject(su);
-				
-				pw.println(resultu);
-				
-				RequestDispatcher rs = request.getRequestDispatcher("subjectsHome.jsp");
-				rs.include(request, response);
-				
-				
-				
-		//add teacher
-		int tid = Integer.parseInt(request.getParameter("tid"));
-		String tname = request.getParameter("tname");;
-		//Integer tcid = Integer.parseInt(request.getParameter("tcid"));
-				
-		Teachers t = new Teachers();
-		t.setTid(tid);
-		t.setTname(tname);
-		//t.setTcid(tcid);
-						
-		//AcademyService as = new AcademyService();
-		String resultt  = as.addTeacher(t);
-				
-		        pw.println(resultt);
-				
-				RequestDispatcher rt = request.getRequestDispatcher("teachersHome.jsp");
-				rt.include(request, response);		
-						
+//		//add student
+//		int stid = Integer.parseInt(request.getParameter("stid"));
+//		String stname = request.getParameter("stname");;
+//		//Integer scid = Integer.parseInt(request.getParameter("scid"));
+//				
+//		Students st = new Students();
+//		st.setStid(stid);
+//		st.setStname(stname);
+//		//st.setScid(scid);
+//			
+//		//AcademyService as = new AcademyService();
+//		String results  = as.addStudent(st);
+//				
+//		pw.println(results);
+//				
+//		RequestDispatcher rd = request.getRequestDispatcher("studentsHome.jsp");
+//		rd.include(request, response);
+//		
+//				
+//		//add subject
+//		int suid = Integer.parseInt(request.getParameter("suid"));
+//		String subname = request.getParameter("subname");;
+//		//Integer sutid = Integer.parseInt(request.getParameter("sutid"));
+//				
+//		Subjects su = new Subjects();
+//		su.setSuid(suid);
+//		su.setSubname(subname);
+//		//su.setSutid(sutid);
+//				
+//		//AcademyService as = new AcademyService();
+//		String resultu  = as.addSubject(su);
+//				
+//				pw.println(resultu);
+//				
+//				RequestDispatcher rs = request.getRequestDispatcher("subjectsHome.jsp");
+//				rs.include(request, response);
+//				
+//				
+//				
+//		//add teacher
+//		int tid = Integer.parseInt(request.getParameter("tid"));
+//		String tname = request.getParameter("tname");;
+//		//Integer tcid = Integer.parseInt(request.getParameter("tcid"));
+//				
+//		Teachers t = new Teachers();
+//		t.setTid(tid);
+//		t.setTname(tname);
+//		//t.setTcid(tcid);
+//						
+//		//AcademyService as = new AcademyService();
+//		String resultt  = as.addTeacher(t);
+//				
+//		        pw.println(resultt);
+//				
+//				RequestDispatcher rt = request.getRequestDispatcher("teachersHome.jsp");
+//				rt.include(request, response);		
+//						
 				
 		doGet(request, response);
 	}
