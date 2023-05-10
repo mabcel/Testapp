@@ -17,7 +17,7 @@
 <a href="classReport.jsp">Class Report</a>
 </div>
 
-<!--<jsp:include page="Home.jsp"></jsp:include>		-->
+<!-- <jsp:include page="Home.jsp"></jsp:include>		-->
 			
 </body>
 </html>
