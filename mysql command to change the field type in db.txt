@@ -1,0 +1,6 @@
+alter table product modify imageurl blob;
+
+
+create table category(cid int primary key,cname varchar(25));
+
+create table product(pid int primary key,pname varchar(25), cid int, price float, qty int, foreign key(cid) references category(cid));

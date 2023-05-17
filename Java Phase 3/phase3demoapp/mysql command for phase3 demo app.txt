@@ -1,0 +1,14 @@
+alter table product modify imageurl blob;
+
+
+create table category(cid int primary key,cname varchar(25));
+
+create table product(pid int primary key,pname varchar(25), cid int, price float, qty int, foreign key(cid) references category(cid));
+
+
+
+create database phase3;
+
+autocreate table @entity...
+
+insert into login values('admin@gmail.com',''admin@123,'admin');
