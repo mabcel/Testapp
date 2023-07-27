@@ -1,0 +1,16 @@
+docker ps -a
+
+docker ps
+
+docker container ps
+
+7e50a905200643a79e1041ffdfdfeddf
+
+7e50a905200643a79e1041ffdfdfeddf
+
+80cacc3a017d4da2b985941f31456426
+
+git clone https://github.com/vadafonebatchorganization/jenking_test.git
+
+
+do we need to push only the .jar file to run this?? ./mvnw spring-boot:run

@@ -1,0 +1,1 @@
+ssh -i "my-keys.pem" ec2-user@ec2-52-23-197-5.compute-1.amazonaws.com

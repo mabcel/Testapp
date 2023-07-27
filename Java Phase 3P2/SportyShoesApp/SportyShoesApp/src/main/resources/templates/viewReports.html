@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Purchase Report</h2>
+
+<form th:action="@{/viewReportsPage}" method="get">
+<h3 align="center">By Category</h3>
+<span>Category ID : <span th:text="${cc.ccid}"></span></span><br>
+<span>Category Name : <span th:text="${cc.categoryname}"></span></span><br>
+  <button type="submit">Generate</button>
+  <button type="submit">Reset</button>
+ </form>
+<br/>
+
+<form th:action="@{/viewUsersPage}" method="get">
+<h3 align="center">By Date</h3>
+<span>Category ID : <span th:text="${cc.ccid}"></span></span><br>
+<span>Category Name : <span th:text="${cc.categoryname}"></span></span><br>
+<span>Category Name : <span th:text="${cc.categoryname}"></span></span><br>
+  <button type="submit">Generate</button>
+  <button type="submit">Reset</button>
+ </form>
+<br/>
+
+<a th:href="@{/adminHome}">Back</a>
+</body>
+</html>
+

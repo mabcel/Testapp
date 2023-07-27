@@ -1,0 +1,3 @@
+db.Employee.insert({_id:1,name:"Ravi",age:21,address:{city:"Bangalore",state:"Kar"}});
+db.Employee.insert({_id:2,name:"Rajesh",age:22,address:{city:"Mumbai",state:"Mh"},project:[{pid:1122,tech:"Java"}]});
+db.Employee.insert({_id:3,name:"Neena",age:23,address:{city:"Mumbai",state:"Mh"},project:[{pid:1122,tech:"Java"},{pid:1123,tech:"Python"}]});

@@ -1,0 +1,19 @@
+	@RequestMapping(value = "/openSignUp",method = RequestMethod.GET)
+	public String openSignUpPage(Model mm, Login ll) {
+		mm.addAttribute("login", ll);
+		return "signUp";
+	}
+	
+
+
+
+	@RequestMapping(value = "/signUp",method = RequestMethod.POST)
+	public String signUp(Model mm, Login ll) {
+		String result = loginService.signUp(ll);
+		mm.addAttribute("login", ll);
+		System.out.println(result);
+
+		return "index";
+
+	}
+	

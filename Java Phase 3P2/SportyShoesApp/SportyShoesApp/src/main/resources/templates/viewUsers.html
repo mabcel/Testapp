@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<h2>View Users</h2>
+
+ <form th:action="@{/viewUsersPage}" method="get">
+  <input type="text" name="keyword" th:value="${keyword}"  placeholder="Find by Email" size="50" >
+  <button type="submit">Search</button>
+  <button type="submit">Reset</button>
+  </form>
+
+<table border="1">
+	<tr>
+		<th>EmailId</th>
+		
+	</tr>
+	<tr th:each="ll:${login}" th:field="${ll}">
+		<td th:text="${ll.emailid}"></td>
+	</tr>
+</table>
+<br/>
+<a th:href="@{/adminHome}">Back</a>
+</body>
+</html>
